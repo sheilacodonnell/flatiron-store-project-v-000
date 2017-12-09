@@ -13,3 +13,10 @@ Item.all.each do |item|
   item.save
   counter += 1
 end
+
+user = User.new(:email =>"obama@gmail.com", :password =>"president", :password_confirmation =>"president")
+user.save!
+cart = Cart.new
+cart.save
+user.current_cart = cart
+user.save
